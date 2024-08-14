@@ -1,0 +1,301 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+/* Navigation bar */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #000;
+    color: #fff;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+
+.nav {
+    width: 73%;
+    padding: 1%;
+}
+
+.nav ul {
+    width: 50%;
+    margin-left: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.inline-block a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inline-block a:hover{
+    text-decoration: none;
+    color: lightslategray;
+}
+
+/* Hero image section */
+.heroImg {
+    height: 1080px;
+    padding: 25px;
+    background-image: url('../images/Italia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #000;
+}
+
+.content {
+    width: 500px;
+    margin: 150px auto;
+    background-color: #000;
+    padding: 50px;
+}
+
+.content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.content h1 {
+    margin: 20px 0;
+    color:#fff;
+}
+
+.content p {
+    font-size: 1.2em;
+    color:#fff;
+}
+
+.content button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: aqua;
+    color: #000;
+    border: none;
+    cursor: pointer;
+   
+}
+.content a {
+    color: #000;
+    text-decoration: none;
+}
+.content button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+}
+
+
+/* My Work Style*/
+
+
+
+
+.myWork {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+.myWork h1{
+    color: white;
+    font-size: 72px;
+}
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "img1 content1"
+        "content2 img2"
+        "img3 content3";
+    gap: 20px;
+    padding: 20px;
+}
+.workGrid .img1 {
+    grid-area: img1;
+}
+
+.workGrid .content1 {
+    grid-area: content1;
+}
+
+.workGrid .img2 {
+    grid-area: img2;
+}
+
+.workGrid .content2 {
+    grid-area: content2;
+}
+.workGrid .img3 {
+    grid-area: img3;
+}
+
+.workGrid .content3 {
+    grid-area: content3;
+}
+
+
+
+.workGrid div {
+    
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.workGrid img {
+    
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.workGrid h4 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 24px;
+}
+.workGrid p {
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+.workGrid button {
+    padding: 10px 20px;
+    background-color: aqua;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.workGrid button:hover {
+    background-color: #333;
+}
+.workGrid button a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    .workGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img1"
+            "content1"
+            "img2"
+            "content2"
+            "img3"
+            "content3";
+            
+    }
+}
+
+
+/* My Skills Style */
+
+.mySkills {
+    text-align: center;
+    padding: 20px;
+}
+
+.mySkills h1{
+    color: white;
+    font-size: 72px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 150px auto;
+}
+.flexContainer div {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    width: 33%;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+.flexContainer img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* page loader */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    border: 16px solid #333;
+    border-radius: 50%;
+    border-top: 16px solid aqua;
+    width: 120px;
+    height: 120px;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
